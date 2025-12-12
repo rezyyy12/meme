@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<title>Meme Generator</title>
+</head>
+<body>
+<header>
+<h1>Meme Generator</h1>
+<nav>
+<button id="openGallery">Шаблоны</button>
+<button id="openStickers">Стикеры</button>
+<button id="randomBtn">Сгенерировать рандом</button>
+<button id="exportBtn">Экспорт PNG</button>
+<button id="shareBtn">Поделиться</button>
+</nav>
+</header>
+
+<main>
+<section id="canvasWrap">
+<canvas id="memeCanvas" width="512" height="512"></canvas>
+</section>
+
+<section id="controls">
+<div class="controlGroup">
+<label>Верхний текст</label>
+<input id="topText" type="text">
+</div>
+
+<div class="controlGroup">
+<label>Нижний текст</label>
+<input id="bottomText" type="text">
+</div>
+
+<div class="controlGroup">
+<label>Шрифт</label>
+<select id="fontSelect">
+<option value="Arial">Arial</option>
+<option value="Impact">Impact</option>
+<option value="Comic Sans MS">Comic Sans</option>
+</select>
+</div>
+
+<div class="controlGroup">
+<label>Цвет</label>
+<input id="fontColor" type="color" value="#ffffff">
+</div>
+
+<div class="controlGroup">
+<label>Размер</label>
+<input id="fontSize" type="range" min="20" max="100" value="48">
+</div>
+
+<div class="controlGroup">
+<label>Выравнивание</label>
+<select id="fontAlign">
+<option value="center">Центр</option>
+<option value="left">Слева</option>
+<option value="right">Справа</option>
+</select>
+</div>
+</section>
+
+<div id="galleryModal" class="modal">
+<div class="modalInner" id="galleryGrid"></div>
+</div>
+
+<div id="stickersModal" class="modal">
+<div class="modalInner" id="stickersGrid"></div>
+</div>
+
+<div id="loading" class="loading"></div>
+</main>
+
+<footer>
+<p>Meme Generator — MIT License</p>
+</footer>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
